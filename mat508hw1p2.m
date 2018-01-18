@@ -16,7 +16,7 @@ for k=1:n
     cputimes(k) = toc;
 end
 figure(1)
-plot(cputimes);
+plot(cputimes,'k');
 title('(AB)*x'); xlabel('Matrix Size'); ylabel('CPU Time in Seconds');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % A*(Bx) case
@@ -30,5 +30,5 @@ for k=1:n
     cputimes(k) = toc;
 end
 figure(2)
-plot(cputimes);
+plot(cputimes,'k');
 title('A(B*x)'); xlabel('Matrix Size'); ylabel('CPU Time in Seconds');
