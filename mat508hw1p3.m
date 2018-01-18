@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% MAT 508 HW 1 Problem 3
+%                       MAT 508 HW 1 Problem 3
 % Here, we compare the computation times of the product AB by using
 % the outter product form, the inner product form, matrix-vector form, and
 % the matrix-matrix (plain * Matlab function) form.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % We use matrices of size up to n.
-n=500;
+n=100;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Outter Product Form
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +20,7 @@ for k=1:n
     cputimes(k) = toc;
 end
 figure(1)
-plot(cputimes);
+plot(cputimes,'k');
 title('Outter Product Form');
 xlabel('Matrix Size'); ylabel('CPU Time in Seconds');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,7 +39,7 @@ for k=1:n
     cputimes(k) = toc;
 end
 figure(2)
-plot(cputimes);
+plot(cputimes,'k');
 title('Inner Product Form');
 xlabel('Matrix Size'); ylabel('CPU Time in Seconds');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,7 +56,7 @@ for k=1:n
     cputimes(k) = toc;
 end
 figure(3)
-plot(cputimes);
+plot(cputimes,'k');
 title('Matrix-Vector Form');
 xlabel('Matrix Size'); ylabel('CPU Time in Seconds');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,6 +70,6 @@ for k=1:n
     cputimes(k) = toc;
 end
 figure(4)
-plot(cputimes);
+plot(cputimes,'k');
 title('Matrix-Matrix Form');
 xlabel('Matrix Size'); ylabel('CPU Time in Seconds');
